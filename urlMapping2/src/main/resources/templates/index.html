@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 th:text="|UrlMapping|"></h1>
+    <img th:src="@{img/lemon.jpg}" alt="레몬">
+    <a th:href="@{sub/test2}">sub/test2</a> <br/>
+    <a th:href="@{sub/test3}">sub/test3</a>
+
+    <!--form 버튼을 클릭했을 때 test4로 매칭시켜라-->
+    <form method="post" action="test4">
+        id : <input type="text" name="id"> <br/>
+        <button type="submit">Click</button>
+    </form>
+</body>
+</html>
