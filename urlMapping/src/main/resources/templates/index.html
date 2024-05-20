@@ -5,6 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-    <div th:text="|Hello UrlMapping!!|"></div>
+    <h1 th:text="|Hello UrlMapping!!|"></h1>
+<!--    <img th:src="@{img/apple.png}" alt="apple"/>-->
+    <a th:href="@{test1}">test1 Get</a><br/>
+    <a th:href="@{test2?data1=100&data2=200&data3=300}">test2_HttpServletRequest</a> <br/>
+    <a th:href="@{test3?data1=100&data2=200&data3=300}">test3_WebRequest</a> <br/>
+    <a th:href="@{test4?data1=100&data2=200&data3=300&data3=400}">test4_HttpServletRequest2</a> <br/>
+    <a th:href="@{test5/100/200/300}">test5_PathVariable</a> <br/>
+    <a th:href="@{test6?data1=100&data2=200&data3=300&data3=400}">test6_RequestParam</a> <br/>
+    <a th:href="@{test2?data1=100&data2=200&data3=300}">test7_ModelAttribute</a> <br/>
 </body>
 </html>
