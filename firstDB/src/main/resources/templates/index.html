@@ -6,6 +6,19 @@
 </head>
 <body>
     <h1 th:text="'Welcome'"></h1>
-    <a href="/add">추가하기</a>
+    <a th:href="@{/add}">추가하기</a> <br/>
+    <a th:href="@{/list}">목록보기</a>
+
+    <h1 th:text="'Result'"></h1>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+        </tr>
+        <tr th:each="item:${list}">
+            <td th:text="${item.id}"></td>
+            <td th:text="${item.name}"></td>
+        </tr>
+    </table>
 </body>
 </html>

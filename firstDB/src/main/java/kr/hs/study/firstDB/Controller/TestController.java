@@ -4,8 +4,11 @@ import kr.hs.study.firstDB.dto.TestDTO;
 import kr.hs.study.firstDB.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @Controller
 public class TestController {
@@ -20,6 +23,13 @@ public class TestController {
     @PostMapping("/add_done")
     public String add_done(TestDTO dto) {
         service.insert(dto);
-        return "result";
+        return "redirect:/";
+    }
+
+    @GetMapping("/")
+    public String list(Model model) {
+        List<TestDTO> list = service.listAll();
+        model.addAttribute("list", list);
+        return "index";
     }
 }

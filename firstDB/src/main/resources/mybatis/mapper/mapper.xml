@@ -5,4 +5,8 @@
     <insert id="insert" parameterType="kr.hs.study.firstDB.dto.TestDTO">
         insert into test(id, name) values(#{id}, #{name})
     </insert>
+
+    <select id="listAll" resultType="kr.hs.study.firstDB.dto.TestDTO">
+        select * from test order by id desc
+    </select>
 </mapper>

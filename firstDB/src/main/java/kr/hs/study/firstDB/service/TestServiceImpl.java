@@ -18,7 +18,7 @@ public class TestServiceImpl implements TestService{
 
     @Override
     public void update(TestDTO dto) {
-
+//        mapper.update(dto);
     }
 
     @Override
@@ -28,6 +28,6 @@ public class TestServiceImpl implements TestService{
 
     @Override
     public List<TestDTO> listAll() {
-        return null;
+        return mapper.listAll();
     }
 }
