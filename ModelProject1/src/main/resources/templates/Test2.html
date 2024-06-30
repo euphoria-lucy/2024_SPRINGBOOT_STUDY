@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Test2</title>
+  <link rel="stylesheet" th:href="@{/css/menu.css}">
+</head>
+<body>
+  <div th:replace="fragment/menu :: menu"></div>
+
+  <br/>
+
+  <form action="/test2/submit" method="get">
+    <label for="num" class="form-label">Input Number</label>
+    <input type="text" class="form-control" id="num" name="num">
+
+    <br/>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Test1</title>
+    <title>Test4</title>
     <link rel="stylesheet" th:href="@{/css/menu.css}">
 </head>
 <body>
@@ -10,9 +10,14 @@
 
     <br/>
 
-    <form action="/test1/submit" method="get">
-        <label for="num" class="form-label">Input Number</label>
-        <input type="text" class="form-control" id="num" name="num">
+    <form action="/test4/submit" method="get">
+        <label>Input First Number</label>
+        <input type="text" class="form-control" id="firstNum" name="firstNum">
+
+        <br/>
+
+        <label>Input End Number</label>
+        <input type="text" class="form-control" id="endNum" name="endNum">
 
         <br/>
 

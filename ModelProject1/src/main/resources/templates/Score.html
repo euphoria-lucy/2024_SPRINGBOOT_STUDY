@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Score</title>
+    <link rel="stylesheet" th:href="@{/css/menu.css}">
+</head>
+<body>
+<div th:replace="fragment/menu :: menu"></div>
+
+<br/>
+
+<form action="/score/submit" method="get">
+    <label>Input Name</label>
+    <input type="text" class="form-control" id="name" name="name">
+
+    <br/>
+
+    <label>Input Korean Score</label>
+    <input type="text" class="form-control" id="koreanScore" name="koreanScore">
+
+    <br/>
+
+    <label>Input English Score</label>
+    <input type="text" class="form-control" id="englishScore" name="englishScore">
+
+    <br/>
+
+    <label>Input Math Score</label>
+    <input type="text" class="form-control" id="mathScore" name="mathScore">
+
+    <br/>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

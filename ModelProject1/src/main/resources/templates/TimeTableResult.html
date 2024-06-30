@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Test1 Result</title>
+    <title>TimeTable Result</title>
     <link rel="stylesheet" th:href="@{/css/menu.css}">
 </head>
 <body>
@@ -10,6 +10,10 @@
 
     <br/>
 
-    <h3 th:text="'The average is : ' + ${average}"></h3>
+    <ul>
+        <li th:each="list : ${multiply}">
+            <span th:text="${list}"></span>
+        </li>
+    </ul>
 </body>
 </html>

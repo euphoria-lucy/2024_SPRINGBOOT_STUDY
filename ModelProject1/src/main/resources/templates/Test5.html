@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Test5</title>
+    <link rel="stylesheet" th:href="@{/css/menu.css}">
+</head>
+<body>
+    <div th:replace="fragment/menu :: menu"></div>
+
+    <br/>
+
+    <form action="/test5/submit" method="get">
+        <label>Input slide1</label>
+        <input type="text" id="slide1" name="slide1">
+
+        <br/>
+
+        <label>Input slide2</label>
+        <input type="text" id="slide2" name="slide2">
+
+        <br/>
+
+        <label>Input slide3</label>
+        <input type="text" id="slide3" name="slide3">
+
+        <br/>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>

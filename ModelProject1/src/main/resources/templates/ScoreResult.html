@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Score Result</title>
+    <link rel="stylesheet" th:href="@{/css/menu.css}">
+</head>
+<body>
+    <div th:replace="fragment/menu :: menu"></div>
+
+    <br/>
+
+    <h1 th:text="'Score Result'"></h1>
+
+    <h3 th:text="'이름은 : ' + ${name}"></h3>
+    <h3 th:text="${koreanScore}"></h3>
+    <h3 th:text="${englishScore}"></h3>
+    <h3 th:text="${mathScore}"></h3>
+    <h3 th:text="${total}"></h3>
+    <h3 th:text="${average}"></h3>
+</body>
+</html>
