@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, tr, td {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <h1 th:text="'Result'"></h1>
+
+    <form method="post" action="update">
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>#</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="id2" th:value="${dto.id}">
+                </td>
+                <td>
+                    <input type="text" name="name2" th:value="${dto.name}">
+                </td>
+                <td>
+                    <a th:href="@{'/delete/' + ${dto.id}}">삭제</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button type="submit">수정완료</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

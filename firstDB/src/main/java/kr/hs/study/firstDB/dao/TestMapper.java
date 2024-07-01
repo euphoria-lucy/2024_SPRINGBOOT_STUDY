@@ -11,4 +11,5 @@ public interface TestMapper {
     public void update(TestDTO dto);
     public void delete(int id);
     public List<TestDTO> listAll( );
+    public TestDTO listOne(int id); // 내용 보기
 }

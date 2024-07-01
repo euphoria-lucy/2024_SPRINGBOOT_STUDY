@@ -9,4 +9,8 @@
     <select id="listAll" resultType="kr.hs.study.firstDB.dto.TestDTO">
         select * from test order by id desc
     </select>
+
+    <select id="listOne" resultType="kr.hs.study.firstDB.dto.TestDTO">
+        select * from test where id=#{id}
+    </select>
 </mapper>
