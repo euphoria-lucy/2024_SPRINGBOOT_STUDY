@@ -46,4 +46,10 @@ public class TestController {
 
         return "view";
     }
+
+    @PostMapping("/update")
+    public String update(TestDTO dto) {
+        service.update(dto);
+        return "result";
+    }
 }

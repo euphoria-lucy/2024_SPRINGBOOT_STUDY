@@ -12,7 +12,7 @@
 <body>
     <h1 th:text="'Result'"></h1>
 
-    <form method="post" action="update">
+    <form method="post" action="../update">
         <table>
             <tr>
                 <td>ID</td>
@@ -21,10 +21,10 @@
             </tr>
             <tr>
                 <td>
-                    <input type="text" name="id2" th:value="${dto.id}">
+                    <input type="text" name="id" th:value="${dto.id}">
                 </td>
                 <td>
-                    <input type="text" name="name2" th:value="${dto.name}">
+                    <input type="text" name="name" th:value="${dto.name}">
                 </td>
                 <td>
                     <a th:href="@{'/delete/' + ${dto.id}}">삭제</a>

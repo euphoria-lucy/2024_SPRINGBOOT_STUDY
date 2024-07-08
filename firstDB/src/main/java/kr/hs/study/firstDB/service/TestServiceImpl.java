@@ -18,7 +18,7 @@ public class TestServiceImpl implements TestService{
 
     @Override
     public void update(TestDTO dto) {
-
+        mapper.update(dto);
     }
 
     @Override
