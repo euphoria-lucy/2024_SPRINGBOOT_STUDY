@@ -11,10 +11,14 @@
     </select>
 
     <select id="listOne" resultType="kr.hs.study.firstDB.dto.TestDTO">
-        select * from test where id=#{id}
+        select * from test where id = #{id}
     </select>
 
     <update id="update" parameterType="kr.hs.study.firstDB.dto.TestDTO">
-        update test set id=#{id}, name=#{name} where id=#{id}
+        update test set id = #{id}, name = #{name} where id = #{id}
     </update>
+
+    <delete id="delete" parameterType="int">
+        delete from test where id = #{id}
+    </delete>
 </mapper>

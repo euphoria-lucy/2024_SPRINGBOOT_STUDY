@@ -50,6 +50,12 @@ public class TestController {
     @PostMapping("/update")
     public String update(TestDTO dto) {
         service.update(dto);
-        return "result";
+        return "redirect:/";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable("id") int id) {
+        service.delete(id);
+        return "redirect:/";
     }
 }

@@ -23,7 +23,7 @@ public class TestServiceImpl implements TestService{
 
     @Override
     public void delete(int id) {
-
+        mapper.delete(id);
     }
 
     @Override
